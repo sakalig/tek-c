@@ -19,6 +19,8 @@ void enableRawMode() {
     raw.c_iflag &= ~(IXON | ICRNL);
     raw.c_oflag &= ~(OPOST);
     raw.c_lflag &= ~(ECHO | ICANON | ISIG);
+    raw.c_cc[VMIN] = 0;
+    raw.c_cc[VTIME] = 1;
 
     // TODO: Test leftover input effect in cygwin
     tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
@@ -27,13 +29,15 @@ void enableRawMode() {
 int main() {
     enableRawMode();
 
-    char c;
-    while (read(STDIN_FILENO, &c, 1) == 1 && c != 'q') {
+    char c = '\0';
+    while (1) {
+        read(STDIN_FILENO, &c, 1);
         if (iscntrl(c)) {
             printf("%d\r\n", c);
         } else {
             printf("%d ('%c')\r\n", c, c);
         }
+        if (c == 'q') break;
     }
     return 0;
 }

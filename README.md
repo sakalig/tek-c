@@ -11,3 +11,4 @@ These are helpful while canonical mode is enabled
 - `Ctrl+D` - Send EOT signal (Closes program)<br>[Current Status: **Disabled**]
 - `reset` (then press `Enter`) - In case terminal output is still not present after exiting the program<br>[Current Status: **Disabled**]
 - `Ctrl+Z` - Suspends program to background | `fg` - brings back to foreground. (MacOS can be problematic with resuming a background job after keying in `fg`. Might be due to `read` function receiving **-1**)<br>[Current Status: **Disabled**]
+- `Ctrl+S` - Suspends program flow control(XOFF). Resumed by `Ctrl+Q`(XON)<br>[Current Status: **Disabled**] 

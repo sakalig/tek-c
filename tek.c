@@ -16,6 +16,7 @@ void enableRawMode() {
 
     struct termios raw = orig_termios;
 
+    raw.c_iflag &= ~(IXON);
     raw.c_lflag &= ~(ECHO | ICANON | ISIG);
 
     // TODO: Test leftover input effect in cygwin

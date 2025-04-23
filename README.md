@@ -9,3 +9,4 @@ This project was compiled under the following conditions:
 Handling operations at current state.
 These are helpful while canonical mode is enabled
 - `Ctrl+D` - Send EOT signal (Closes program)
+- `reset` (then press `Enter`) - In case terminal output is still not present after exiting the program

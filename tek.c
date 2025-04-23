@@ -16,6 +16,7 @@ void enableRawMode() {
 
     raw.c_lflag &= ~(ECHO);
 
+    // TODO: Test leftover input effect in cygwin
     tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
 }
 

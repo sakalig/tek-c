@@ -1,3 +1,4 @@
+// LIBS
 #include <ctype.h>
 #include <errno.h>
 #include <stdio.h>
@@ -5,8 +6,10 @@
 #include <termios.h>
 #include <stdlib.h>
 
+// DATA PACKAGERS
 struct termios orig_termios;
 
+// TERMINAL
 void die(const char *s) {
     perror(s);
     exit(1);
@@ -33,6 +36,7 @@ void enableRawMode() {
     if (tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw) ==-1) die("tcsetattr");
 }
 
+// INIT
 int main() {
     enableRawMode();
 

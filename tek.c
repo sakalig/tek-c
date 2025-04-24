@@ -6,6 +6,9 @@
 #include <termios.h>
 #include <stdlib.h>
 
+// DEFINES
+#define CTRL_KEY(k) ((k) & 0x1f)
+
 // DATA PACKAGERS
 struct termios orig_termios;
 
@@ -48,7 +51,7 @@ int main() {
         } else {
             printf("%d ('%c')\r\n", c, c);
         }
-        if (c == 'q') break;
+        if (c == CTRL_KEY('q')) break;
     }
     return 0;
 }

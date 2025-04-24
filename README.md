@@ -1,6 +1,8 @@
 # tek-c
 A text editor in C
 
+<img src="images/primary.png" alt="text editor screen">
+
 ## Prerequisites
 This project was compiled under the following conditions:
 - GCC 15 (-std=gnu23)

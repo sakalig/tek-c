@@ -5,7 +5,7 @@ A text editor in C
 
 ## Prerequisites
 This project was compiled under the following conditions:
-- GCC 15 (-std=gnu23) [Tested with -std=c99]
+- GCC 15 (-std=gnu23) [Also works with -std=c99]
 
 ## Controls
 Handling operations at current state.

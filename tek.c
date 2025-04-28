@@ -39,6 +39,8 @@ void enableRawMode() {
     if (tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw) ==-1) die("tcsetattr");
 }
 
+// Key capture functions
+
 // INIT
 int main() {
     enableRawMode();

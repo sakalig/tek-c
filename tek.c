@@ -45,6 +45,8 @@ void enableRawMode() {
 int main() {
     enableRawMode();
 
+    // Foundation: screen refresh logic
+
     char c = '\0';
     while (1) {
         if (read(STDIN_FILENO, &c, 1) == -1 && errno != EAGAIN) die("read");

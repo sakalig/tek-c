@@ -9,6 +9,8 @@
 // DEFINES
 #define CTRL_KEY(k) ((k) & 0x1f)
 
+// Versioning
+
 // DATA PACKAGERS
 struct termios orig_termios;
 

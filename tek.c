@@ -42,6 +42,7 @@ void enableRawMode() {
 }
 
 // Key capture functions
+// Move cursor
 // Welcome message
 
 // INIT

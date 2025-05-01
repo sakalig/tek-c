@@ -42,6 +42,7 @@ void enableRawMode() {
 }
 
 // Key capture functions
+// Welcome message
 
 // INIT
 int main() {

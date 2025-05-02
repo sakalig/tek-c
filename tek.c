@@ -11,6 +11,8 @@
 
 // Versioning
 
+// Enums for keys
+
 // DATA PACKAGERS
 struct termios orig_termios;
 

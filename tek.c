@@ -44,7 +44,7 @@ void enableRawMode() {
 }
 
 // Key capture functions
-// Move cursor + Maintain bounds wiithin window border + PageUp/PageDown to simulate fullscreen scrolls + Home/End cursor movement
+// Move cursor + Maintain bounds wiithin window border + PageUp/PageDown to simulate fullscreen scrolls + Home/End cursor movement + Check for delete key press
 // Welcome message
 
 // INIT

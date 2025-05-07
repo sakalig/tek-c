@@ -43,7 +43,32 @@ void enableRawMode() {
     if (tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw) ==-1) die("tcsetattr");
 }
 
+char editorReadKey() {
+    int nread;
+    char c;
+    while ((nread = read(STDIN_FILENO, &c, 1)) != 1) {
+        if (nread == -1 && errno != EAGAIN) die("read"); // error & resource availability
+    }
+    printf("%cq\r\n", c);
+    return c;
+        // if (iscntrl(c)) {
+        //     printf("%d\r\n", c);
+        // } else {
+        //     printf("%d ('%c')\r\n", c, c);
+        // }
+        // if (c == CTRL_KEY('q')) break;
+}
+
 // Key capture functions
+void editorProcessKeypress() {
+    char c = editorReadKey();
+
+    switch (c) {
+        case CTRL_KEY('q'):
+            exit(0);
+            break;
+    }
+}
 // Move cursor + Maintain bounds wiithin window border + PageUp/PageDown to simulate fullscreen scrolls + Home/End cursor movement + Check for delete key press
 // Welcome message
 
@@ -53,15 +78,9 @@ int main() {
 
     // Foundation: screen refresh logic
 
-    char c = '\0';
+    //char c = '\0';
     while (1) {
-        if (read(STDIN_FILENO, &c, 1) == -1 && errno != EAGAIN) die("read");
-        if (iscntrl(c)) {
-            printf("%d\r\n", c);
-        } else {
-            printf("%d ('%c')\r\n", c, c);
-        }
-        if (c == CTRL_KEY('q')) break;
+        editorProcessKeypress();
     }
     return 0;
 }

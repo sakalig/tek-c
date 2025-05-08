@@ -59,7 +59,7 @@ char editorReadKey() {
         // if (c == CTRL_KEY('q')) break;
 }
 
-// Key capture functions
+// INPUT
 void editorProcessKeypress() {
     char c = editorReadKey();
 

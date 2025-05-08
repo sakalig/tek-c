@@ -85,6 +85,7 @@ int main() {
 
     //char c = '\0';
     while (1) {
+        editorRefreshScreen();
         editorProcessKeypress();
     }
     return 0;

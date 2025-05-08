@@ -60,7 +60,9 @@ char editorReadKey() {
 }
 
 // OUTPUT
-
+void editorRefreshScreen() {
+    write(STDOUT_FILENO, "\x1b[2J", 4);
+}
 
 // INPUT
 void editorProcessKeypress() {

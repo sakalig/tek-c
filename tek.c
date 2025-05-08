@@ -59,6 +59,9 @@ char editorReadKey() {
         // if (c == CTRL_KEY('q')) break;
 }
 
+// OUTPUT
+
+
 // INPUT
 void editorProcessKeypress() {
     char c = editorReadKey();

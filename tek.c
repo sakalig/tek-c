@@ -51,12 +51,6 @@ char editorReadKey() {
     }
     printf("%cq\r\n", c);
     return c;
-        // if (iscntrl(c)) {
-        //     printf("%d\r\n", c);
-        // } else {
-        //     printf("%d ('%c')\r\n", c, c);
-        // }
-        // if (c == CTRL_KEY('q')) break;
 }
 
 // OUTPUT

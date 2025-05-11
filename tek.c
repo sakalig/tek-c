@@ -78,7 +78,6 @@ int main() {
 
     // Foundation: screen refresh logic
 
-    //char c = '\0';
     while (1) {
         editorRefreshScreen();
         editorProcessKeypress();

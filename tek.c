@@ -9,7 +9,7 @@
 // DEFINES
 #define CTRL_KEY(k) ((k) & 0x1f)
 
-// Versioning
+#define _VERSION "0.0.1"
 
 // Enums for keys
 

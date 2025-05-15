@@ -20,3 +20,6 @@ These are helpful while canonical mode is enabled
 - Input: **BRKINT** | **INPCK** | **ISTRIP**
 - Output: **CS8**
 - Local: **IEXTEN**
+
+## Add-ons (Upcoming)
+- Search : `Ctrl+F`

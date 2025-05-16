@@ -23,3 +23,4 @@ These are helpful while canonical mode is enabled
 
 ## Add-ons (Upcoming)
 - Search : `Ctrl+F`
+- Multi-threading (Functional)
